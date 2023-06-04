@@ -23,31 +23,6 @@ export default function Contact({address,contacts,title}){
                 //TODO error logic here
             })
     }
-"use client";
-
-import {useState} from "react";
-import axios from "axios";
-
-export default function Contact({address,contacts,title}){
-    const [contactFields, setContactFields] = useState({
-        name : '',
-        phone : '',
-        email : '',
-        message : ''
-    });
-
-    const handleSubmit = async e => {
-        e.preventDefault();
-        const newContact = axios.post('/api/contact',contactFields)
-            .then(res =>{
-                console.log(res);
-                //TODO success logic here
-            })
-            .catch(err =>{
-                console.error(err);
-                //TODO error logic here
-            })
-    }
 
     return(
         <section id={"contact"}>
