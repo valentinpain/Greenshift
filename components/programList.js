@@ -1,4 +1,4 @@
-import ProgramCard from "./ProgramCard";
+import ProgramCard from "./programCard";
 import {Program} from "@/lib/program";
 
 export default function ProgramList(){
