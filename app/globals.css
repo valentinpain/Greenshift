@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --outfit : 'Outfit', sans-serif;
+}
+
+.btn_primary{
+    @apply text-base font-bold px-4 py-2 bg-primary text-white border border-primary hover:bg-white rounded hover:text-primary
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
