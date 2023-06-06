@@ -3,9 +3,9 @@ import Image from "next/image"
 
 export default function PricingElement({title, price, color, content}){
     return(
-        <div className="flex flex-col w-full justify-evenly text-center">
-            <div className={`rounded text-white bg-${color} p-5`}>
-                <p className="m-0 lg:m-1">{title}</p>
+        <div className="flex md:flex-col justify-evenly text-center">
+            <div className={`flex flex-col rounded justify-center text-white bg-${color} p-5`}>
+                <p className="m-0 lg:m-1 text-3xl">{title}</p>
                 <p className="m-0 lg:m-1"><span className="lg:text-4xl text-2xl">{price}</span>€</p>
                 <button className={`m-1 px-4 py-2 bg-white rounded text-sm lg:text-lg text-${color}`}><Link href="#contact">Contactez-nous</Link></button>
             </div>
