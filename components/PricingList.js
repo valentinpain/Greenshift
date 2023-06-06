@@ -7,7 +7,7 @@ export default function PricingList(){
             <h1 className="text-center text-5xl mb-2">Grille de prix</h1>
             <p className="text-center text-gray-500 mb-10">Phrase introduction</p>
 
-            <div className="flex w-8/12 gap-3">
+            <div className="flex justify-center w-8/12 lg:gap-3 gap-2">
                 {
                     Pricing.items.map(function(pricing, index){
                         return (
