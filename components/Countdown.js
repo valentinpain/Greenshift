@@ -1,11 +1,22 @@
 "use client"
 import { useEffect, useState } from "react";
+import React from "react";
+import Twitch from "./Twitch";
 
 export default function Countdown(){
     const [days, setDays] = useState(0)
     const [hours, setHours] = useState(0)
     const [minutes, setMinutes] = useState(0)
     const [seconds, setSeconds] = useState(0)
+
+    let date_string = "2023-06-07 02:00:00"
+
+    Twitch.defaultProps = {
+    targetID: 'twitch-embed',
+    width: '940',
+    height: '480',
+    channel: 'cheese',
+    }
 
     function timingCalc(endtime) {
       'use strict';
@@ -49,34 +60,44 @@ export default function Countdown(){
 
      useEffect(() => {
         setTimeout(() => {
-            installCalc(new Date("2023-07-03"));
+            installCalc(new Date(date_string));
         }, 500);
     },[installCalc]);
 
     return(
         <section className="flex flex-col items-center w-full mt-2 font-outfit m-auto border-b pb-4">
-            <h2 className="text-3xl mb-3">On arrive !</h2>
+        {
+            (!(new Date(date_string) < new Date())) && (
+            <>
+                <h2 className="text-3xl mb-3">On arrive !</h2>
 
-            <div id="count_div" className="hidden sm:flex justify-center text-white w-full">
-                <div className="bg-primary p-10 m-1 text-center rounded-xl">
-                    <span id="days" className='number text-4xl'>{days}</span>
-                    <div>Jours</div>
+                <div id="count_div" className="hidden sm:flex justify-center text-white w-full">
+                    <div className="bg-primary p-10 m-1 text-center rounded-xl">
+                        <span id="days" className='number text-4xl'>{days}</span>
+                        <div>Jours</div>
+                    </div>
+                    <div className="bg-primary p-10 m-1 text-center rounded-xl">
+                        <span id="hours" className='number text-4xl'>{hours}</span>
+                        <div>Heures</div>
+                    </div>
+                    <div className="bg-primary p-10 m-1 text-center rounded-xl">
+                        <span id="minutes" className='number text-4xl'>{minutes}</span>
+                        <div>Minutes</div>
+                    </div>
+                    <div className="bg-primary p-10 m-1 text-center rounded-xl">
+                        <span id="seconds" className='number text-4xl px-2'>{seconds}</span>
+                        <div>Secondes</div>
+                    </div>
                 </div>
-                <div className="bg-primary p-10 m-1 text-center rounded-xl">
-                    <span id="hours" className='number text-4xl'>{hours}</span>
-                    <div>Heures</div>
-                </div>
-                <div className="bg-primary p-10 m-1 text-center rounded-xl">
-                    <span id="minutes" className='number text-4xl'>{minutes}</span>
-                    <div>Minutes</div>
-                </div>
-                <div className="bg-primary p-10 m-1 text-center rounded-xl">
-                    <span id="seconds" className='number text-4xl px-2'>{seconds}</span>
-                    <div>Secondes</div>
-                </div>
-            </div>
+            </>
+            )
+        }
 
             <p className="sm:hidden w-1/2 m-auto">La conférence commence dans <span id="small_days">{days}</span> jour(s), <span id="small_hours">{hours}</span> heure(s), <span id="small_minutes">{minutes}</span> minute(s) et <span id="small_seconds">{seconds}</span> seconde(s)</p>
+            {
+                (new Date(date_string) < new Date()) &&
+                    <Twitch />
+            }
         </section>
     )
 }
