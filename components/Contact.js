@@ -71,7 +71,7 @@ export default function Contact({address,contacts,title}){
                         onChange={e => setContactFields({...contactFields, message: e.target.value})}
                     ></textarea>
                     <div className={"flex justify-center md:justify-end md:col-span-2"}>
-                        <button className={"btn_primary"}>Send Message</button>
+                        <button className={"btn_primary"}>Envoyer</button>
                     </div>
                 </form>
             </aside>
