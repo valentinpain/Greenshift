@@ -8,7 +8,7 @@ export default function SponsorsList(){
             <h1 className="text-center text-5xl mb-2">Ils nous font confiance</h1>
             <p className="text-center text-gray-500 mb-10">Phrase introduction</p>
 
-            <div className="grid lg:grid-cols-3 md:grid-cols-4 gap-6 md:px-28 px-10 flex">
+            <div className="grid lg:grid-cols-3 md:grid-cols-3 gap-6 md:px-28 px-10 flex">
                 {Sponsor.items.map(function(sponsor){
                     return (
                         <SponsorElement key={sponsor.key} title={sponsor.title} text={sponsor.text} link={sponsor.link} logo_path={sponsor.logo_path} />
