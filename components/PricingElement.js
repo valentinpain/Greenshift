@@ -15,8 +15,8 @@ export default function PricingElement({title, price, color, content}){
                 {
                     content.map(function(text, index){
                         return (
-                            text.active ? (<p key={index} className="mt-2 lg:text-sm text-xs flex text-center w-full justify-center items-center">{getIcons('check'} {text.title}</p>)
-                            : (<p key={index} className="mt-2 lg:text-sm text-xs text-gray-400 flex text-center w-full justify-center items-center">{getIcons('cross'}  {text.title}</p>)
+                            text.active ? (<p key={index} className="mt-2 lg:text-sm text-xs flex text-center w-full justify-center items-center">{getIcons('check')} {text.title}</p>)
+                            : (<p key={index} className="mt-2 lg:text-sm text-xs text-gray-400 flex text-center w-full justify-center items-center">{getIcons('cross')}  {text.title}</p>)
                         )
                     })
                 }
