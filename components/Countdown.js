@@ -9,7 +9,7 @@ export default function Countdown(){
     const [minutes, setMinutes] = useState(0)
     const [seconds, setSeconds] = useState(0)
 
-    let date_string = "2023-06-08 14:50:00"
+    let date_string = "2023-07-03 09:00:00"
 
     Twitch.defaultProps = {
     targetID: 'twitch-embed',
