@@ -5,7 +5,7 @@ import {getIcons} from "@/lib/func/iconFunc";
 
 export default function PricingElement({title, price, color, content}){
     return(
-        <div className="flex md:flex-col justify-evenly text-center">
+        <div className="flex md:flex-col justify-evenly text-center" style="min-width: 20%">
             <div className={`flex flex-col rounded justify-center text-white bg-${color} p-5`}>
                 <p className="m-0 lg:m-1 text-3xl">{title}</p>
                 <p className="m-0 lg:m-1"><span className="lg:text-4xl text-2xl">{price}</span>€</p>
