@@ -6,7 +6,7 @@ export const metadata = {
   title: 'GreenShift',
   description: '',
   icons : {
-            icon : "/images/green_shift_logo.png",
+            icon : "/images/green_shift_logo_mini.png",
         },
 }
 
