@@ -6,7 +6,7 @@ export const metadata = {
   title: 'GreenShift',
   description: '',
   icons : {
-            icon : ${process.env.DIRECTUS_FRONT_URL_DOCUMENT}${seo.favicon},
+            icon : "/images/green_shift_logo.png",
         },
 }
 
