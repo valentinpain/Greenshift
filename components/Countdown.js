@@ -93,8 +93,10 @@ export default function Countdown(){
             )
         }
 
-            <p className="sm:hidden w-1/2 m-auto">La conférence commence dans <span id="small_days">{days}</span> jour(s), <span id="small_hours">{hours}</span> heure(s), <span id="small_minutes">{minutes}</span> minute(s) et <span id="small_seconds">{seconds}</span> seconde(s)</p>
-            {
+            (!new Date(date_string) < new Date()) && (
+                <p className="sm:hidden w-1/2 m-auto">La conférence commence dans <span id="small_days">{days}</span> jour(s), <span id="small_hours">{hours}</span> heure(s), <span id="small_minutes">{minutes}</span> minute(s) et <span id="small_seconds">{seconds}</span> seconde(s)</p>
+            )
+                {
                 (new Date(date_string) < new Date()) && (
                     <>
                         <div className="hidden md:block">
