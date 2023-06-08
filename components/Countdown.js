@@ -9,7 +9,7 @@ export default function Countdown(){
     const [minutes, setMinutes] = useState(0)
     const [seconds, setSeconds] = useState(0)
 
-    let date_string = "2023-06-08 14:35:00"
+    let date_string = "2023-06-08 14:40:00"
 
     Twitch.defaultProps = {
     targetID: 'twitch-embed',
@@ -92,10 +92,11 @@ export default function Countdown(){
             </>
             )
         }
-
-            (!new Date(date_string) < new Date()) && (
-                <p className="sm:hidden w-1/2 m-auto">La conférence commence dans <span id="small_days">{days}</span> jour(s), <span id="small_hours">{hours}</span> heure(s), <span id="small_minutes">{minutes}</span> minute(s) et <span id="small_seconds">{seconds}</span> seconde(s)</p>
-            )
+            {
+                (!new Date(date_string) < new Date()) && (
+                    <p className="sm:hidden w-1/2 m-auto">La conférence commence dans <span id="small_days">{days}</span> jour(s), <span id="small_hours">{hours}</span> heure(s), <span id="small_minutes">{minutes}</span> minute(s) et <span id="small_seconds">{seconds}</span> seconde(s)</p>
+                )
+            }
                 {
                 (new Date(date_string) < new Date()) && (
                     <>
