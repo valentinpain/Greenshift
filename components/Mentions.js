@@ -1,6 +1,6 @@
 export default function Mentions(){
     return (
-        <section className="flex flex-col items-start w-full mt-2 font-outfit w-8/12 m-auto">
+        <section className="flex flex-col items-start mt-2 font-outfit w-8/12 m-auto">
             <h1 className="text-center md:text-5xl text-3xl mb-10">Mentions légales</h1>
 
             <div>
