@@ -15,6 +15,7 @@ export default function Layout({children}){
             <main>
                 {children}
             </main>
+            <Contact contacts={GlobalData.contacts} address={GlobalData.address} title={GlobalData.contact.title}/>
             <Footer logoImg={GlobalData.main.logoImg} socials={GlobalData.socials} items={NavData.items} copyright={GlobalData.main.copyrightFooter}/>
         </>
     )
