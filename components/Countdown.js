@@ -15,7 +15,7 @@ export default function Countdown(){
     targetID: 'twitch-embed',
     width: '940',
     height: '480',
-    channel: 'gotaga',
+    channel: 'greenshiftconf',
     }
 
     function timingCalc(endtime) {
