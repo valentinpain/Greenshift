@@ -41,39 +41,6 @@ export default function Contact({address,contacts,title}){
                         })}
                     </div>
                 </div>
-                <form className={"grid md:grid-cols-2 gap-3 order-1"} onSubmit={handleSubmit}>
-                    <input
-                        className={"placeholder-tertiary border-tertiary rounded"}
-                        type={"text"}
-                        placeholder={"Name *"}
-                        required
-                        onChange={e => setContactFields({...contactFields, name: e.target.value})}
-                    />
-                    <input
-                        className={"placeholder-tertiary border-tertiary rounded"}
-                        type={"email"}
-                        placeholder={"Email *"}
-                        required
-                        onChange={e => setContactFields({...contactFields, email: e.target.value})}
-                    />
-                    <input
-                        className={"md:col-span-2 placeholder-tertiary border-tertiary rounded"}
-                        type={"text"}
-                        placeholder={"Phone *"}
-                        pattern={"[0-9]{10}"}
-                        required
-                        onChange={e => setContactFields({...contactFields, phone: e.target.value})}
-                    />
-                    <textarea
-                        className={"resize-none h-36 md:h-52 md:col-span-2 placeholder-tertiary border-tertiary rounded"}
-                        placeholder={"Message *"}
-                        required
-                        onChange={e => setContactFields({...contactFields, message: e.target.value})}
-                    ></textarea>
-                    <div className={"flex justify-center md:justify-end md:col-span-2"}>
-                        <button className={"btn_primary"}>Envoyer</button>
-                    </div>
-                </form>
             </aside>
         </section>
     )
