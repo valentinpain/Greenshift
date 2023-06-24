@@ -27,7 +27,7 @@ export default function Contact({address,contacts,title}){
     return(
         <section id={"contact"}>
             <h1 className={"text-5xl py-10 text-center font-outfit "}>{title}</h1>
-            <aside className={"px-10 md:px-28 grid md:grid-cols-2 gap-y-5 py-10 text-center"}>
+            <aside className={"px-10 md:px-28 grid md:grid-cols-1 gap-y-5 py-10 text-center"}>
                 <div className={"grid-cols-2 mx-auto py-5 order-last md:order-1 grid md:grid-cols-1 md:mx-0 md:py-0 gap-y-5 md:my-auto"}>
                     <div className={"font-outfit"}>
                         <h4 className={"text-lg font-outfit font-bold uppercase pb-2"}>Adresse</h4>
