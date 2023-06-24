@@ -23,7 +23,7 @@ export default function Footer({logoImg,socials,items,copyright})
                         })}
                     </div>
                 </div>
-                <div className={"grid md:grid-cols-2 gap-y-2 place-content-center mx-auto"}>
+                <div className={"grid md:grid-cols-3 gap-y-2 place-content-center mx-auto"}>
                     {items.map(function(item){
                         return(
                             <button key={item.id} className={"hover:underline "}>
