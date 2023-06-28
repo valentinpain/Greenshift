@@ -41,6 +41,11 @@ Adresse : 17 Rue de l'Eglise, 76520 Saint-Aubin-Celloville, France.</p>
             </div>
 
             <div>
+                <h2 className="text-2xl font-bold mb-5">8. Droit à l'image</h2>
+                <p className="text-justify text-gray-500 mb-10">Toute personne qui viendrait participer physiquement à l'évènement accepte par défaut le fait que son image pourra être utilisée dans le cadre de l'évènement.</p>
+            </div>
+
+            <div>
                 <p>Si vous avez des questions concernant ces mentions légales, veuillez nous contacter à l'adresse suivante : contact-greenshift@ordigeek.fr
                     <br />
 
