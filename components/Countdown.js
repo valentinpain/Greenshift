@@ -104,7 +104,7 @@ export default function Countdown(){
                             <Twitch />
                         </div>
                         <div className="mt-2 md:hidden">
-                            <a href="https://twitch.tv/gotaga" className="text-primary">Le lien est disponible ici</a>
+                            <a href="https://twitch.tv/greenshiftconf" className="text-primary">Le lien est disponible ici</a>
                         </div>
                     </>
                 )
